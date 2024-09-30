@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "678623705842",
+    "project_id": "devplaceapp092024",
+    "storage_bucket": "devplaceapp092024.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678623705842:android:12f082c1e3335e8faeae6b",
+        "android_client_info": {
+          "package_name": "com.example.projetokotlin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx6l0sSFH7-1O4LBYSVYHLhmqvcEoVxh8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

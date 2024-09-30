@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProjetoKotlin"
+        tools:targetApi="31">
+
+        <!-- Defina a TelaInicialSplash como a tela inicial -->
+        <activity
+            android:name=".view.inicioSplash.TelaInicialSplash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Remove o intent-filter da FormLogin -->
+        <activity
+            android:name=".view.formlogin.FormLogin"
+            android:exported="true" />
+
+        <activity
+            android:name=".view.inicioEmpresa.relatorioOrdem.RelatorioDasOrdens"
+            android:exported="false" />
+        <activity
+            android:name=".view.telaAdm.Adm"
+            android:exported="false" />
+        <activity
+            android:name=".view.cliente.infoCliente.CriarCliente.listarCliente.ListarCliente"
+            android:exported="false" />
+        <activity
+            android:name=".view.cliente.infoCliente.CriarCliente.CriarCliente"
+            android:exported="false" />
+        <activity
+            android:name=".view.cliente.infoCliente.telaCriarCliente"
+            android:exported="false" />
+        <activity
+            android:name=".view.cliente.infoCliente.telaCliente"
+            android:exported="false" />
+        <activity
+            android:name=".view.inicioEmpresa.novaSenha.NovaSenhaEmpresa"
+            android:exported="false" />
+        <activity
+            android:name=".view.inicioEmpresa.faturamento.TelaFaturamento"
+            android:exported="false" />
+        <activity
+            android:name=".view.inicioEmpresa.telaInicialEmpresa"
+            android:exported="false" />
+        <activity
+            android:name=".view.gestaoOrdem.GestaoDeOrdem"
+            android:exported="false" />
+        <activity
+            android:name=".view.avaliacao.avaliacaoServico"
+            android:exported="false" />
+        <activity
+            android:name=".view.cliente.OrdensDoCliente"
+            android:exported="false" />
+        <activity
+            android:name=".view.listaServico.ListaServico"
+            android:exported="false" />
+        <activity
+            android:name=".view.navegacao.telaNavegacao"
+            android:exported="false" />
+        <activity
+            android:name=".view.EditarExcluirOrdem.EditarExcluirOrdem"
+            android:exported="false" />
+        <activity
+            android:name=".view.gerarOrdem.GerarNovaOrdem"
+            android:exported="false" />
+        <activity
+            android:name=".view.formcadastro.FormCadastro"
+            android:exported="false" />
+    </application>
+</manifest>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Dev Place</string>
+    <string name="titulo_form_cadastro">Cadastro</string>
+    <string name="titulo_form_login">Login</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_senha">Senha</string>
+    <string name="hint_btn">Cadastrar usuário</string>
+    <string name="hint_btnEntrar">Entrar</string>
+    <string name="hint_naoCadastro">Não tem cadastro?</string>
+    <string name="hint_titulo_principal">Tela Principal</string>
+    <string name="hint_deslogar">Sair?</string>
+    <string name="hint_cadastroServico">Solicitar serviço</string>
+    <string name="hint_obsServico">Observações do serviço</string>
+    <string name="select_item">Selecione</string>
+    <string name="hint_descricao_servico">Descrição do serviço</string>
+    <string name="hint_porte_sistema">Porte do sistema</string>
+    <string name="hint_valor">Valor R$</string>
+</resources>

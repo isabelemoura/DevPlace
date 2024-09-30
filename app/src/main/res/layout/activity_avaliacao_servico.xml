@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/backgroud"
+        tools:context=".view.formcadastro.FormCadastro">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avalie o serviço prestado"
+            android:textSize="23dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            android:layout_marginBottom="50dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <RatingBar
+                android:id="@+id/ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:progressBackgroundTint="@color/corFunAzul"
+                android:progressTint="#FF9800" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rbStarts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_marginStart="20dp"
+            />
+
+        <TextView
+            android:id="@+id/editdescricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Descrição da ordem"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_marginStart="20dp"
+            />
+
+        <EditText
+            android:id="@+id/editComentario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botao"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Digite aqui o seu comentario..."
+            android:textColorHint="@color/black"
+            android:padding="10dp"
+
+            android:textColor="@color/black"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAvaliacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submeter avaliação"
+            android:layout_gravity="center"
+            android:background="@drawable/backgroud_buttom"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

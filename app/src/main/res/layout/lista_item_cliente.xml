@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:background="@drawable/botao"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/id_item"
+            android:layout_width="190dp"
+            android:layout_height="29dp"
+            android:textSize="0dp"
+            tools:ignore="MissingConstraints"
+            />
+
+        <TextView
+            android:id="@+id/txtOrdem"
+            android:layout_width="190dp"
+            android:layout_height="29dp"
+            android:text="Ordem de serviço"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <TextView
+            android:id="@+id/editCliente"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:text="Cliente:"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txtOrdem"
+            app:layout_constraintTop_toBottomOf="@+id/txtOrdem" />
+
+        <TextView
+            android:id="@+id/editdescricao"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="10dp"
+            android:text="Descrição:"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/editCliente"
+            app:layout_constraintTop_toBottomOf="@+id/editCliente" />
+
+        <TextView
+            android:id="@+id/editPorteSys"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_marginTop="10dp"
+            android:text="Porte do sistema:"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/editValor"
+            app:layout_constraintTop_toBottomOf="@+id/editValor"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/editValor"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="10dp"
+            android:text="Valor R$:"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/editdescricao"
+            app:layout_constraintTop_toBottomOf="@+id/editdescricao" />
+
+        <TextView
+            android:id="@+id/editStatus"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:text="Status:"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/editPorteSys"
+            app:layout_constraintTop_toBottomOf="@+id/editPorteSys"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_editar"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="170dp"
+            android:background="@drawable/backgroud_buttom_editar"
+            android:text="Editar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/editStatus"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.777" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

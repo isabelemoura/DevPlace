@@ -1,0 +1,21 @@
+<!-- res/drawable/rounded_button_with_shadow.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Sombra -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="13dp" />
+            <solid android:color="#80FFFFFF" /> <!-- Cor da sombra -->
+        </shape>
+    </item>
+
+    <!-- Botão principal -->
+    <item android:left="2dp" android:top="2dp">
+        <shape android:shape="rectangle">
+            <stroke android:color="@color/black" android:width="1dp"/>
+            <solid android:color="@color/black"/>
+            <corners android:radius="13dp"/>
+        </shape>
+    </item>
+
+</layer-list>

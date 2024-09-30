@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="277dp"
+        android:background="@drawable/botao"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/Email"
+            android:layout_width="190dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="10dp"
+            android:text="Email:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/Nome"
+            app:layout_constraintTop_toBottomOf="@+id/Nome"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/Nome"
+            android:layout_width="190dp"
+            android:layout_height="29dp"
+            android:text="Nome:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="29dp" />
+
+        <TextView
+            android:id="@+id/Telefone"
+            android:layout_width="190dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="10dp"
+            android:text="Telefone:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/Email"
+            app:layout_constraintTop_toBottomOf="@+id/Email"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/Status"
+            android:layout_width="190dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="10dp"
+            android:text="Status:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/Telefone"
+            app:layout_constraintTop_toBottomOf="@+id/Telefone"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/btn_ativar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/backgroud_buttom_editar"
+            android:text="Ativar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/Status"
+            app:layout_constraintTop_toBottomOf="@+id/Status"
+            app:layout_constraintVertical_bias="0.542"
+            tools:ignore="MissingConstraints" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_desativar"
+            android:layout_width="150dp"
+            android:layout_marginStart="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/backgroud_buttom_excluir"
+            android:text="Desativar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/Status"
+            app:layout_constraintTop_toBottomOf="@+id/Status"
+            app:layout_constraintVertical_bias="0.542"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
