@@ -10,69 +10,79 @@
     <LinearLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@color/backgroud"
+        android:padding="16dp"
         tools:context=".view.formcadastro.FormCadastro">
 
         <TextView
             android:id="@+id/btn_deslogar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/ic_voltar_nav"
             android:textStyle="bold"
             tools:ignore="MissingConstraints" />
 
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_logo" />
+
+        <ImageView
+            android:id="@+id/imageViewUser"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_male_man" />
+
         <TextView
+            android:id="@+id/textViewNomeOuEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Home cliente"
-            android:textSize="25dp"
+            android:text="E-mail ou Nome"
+            android:textSize="25sp"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:layout_gravity="center"
-            android:layout_marginTop="90dp"
-            android:layout_marginBottom="20dp"
-            />
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
 
+        <!-- Buttons Section -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btbCadastrarServico"
             android:text="Gerar nova ordem de serviço"
-            android:layout_width="307dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/backgroud_buttom"
             android:drawableLeft="@drawable/ic_circle_plus"
-            android:drawablePadding="-10dp"
+            android:drawablePadding="8dp"
             android:gravity="center"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            />
-
+            android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btbServico"
-            android:layout_width="307dp"
+            android:layout_width="match_parent"
             android:text="Acompanhar ordens de serviço"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="30dp"
             android:layout_marginTop="12dp"
-            android:layout_marginEnd="30dp"
             android:background="@drawable/backgroud_buttom"
             android:drawableLeft="@drawable/ic_search_alt"
-            android:drawablePadding="-10dp"
+            android:drawablePadding="8dp"
             android:gravity="center"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textStyle="bold" />
@@ -80,18 +90,15 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btbTelaCliente"
             android:text="Avalie o serviço prestado"
-            android:layout_width="307dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="30dp"
             android:layout_marginTop="12dp"
-            android:layout_marginEnd="30dp"
             android:background="@drawable/backgroud_buttom"
             android:drawableLeft="@drawable/ic_feedback"
-            android:drawablePadding="-10dp"
+            android:drawablePadding="8dp"
             android:gravity="center"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textStyle="bold" />
@@ -99,18 +106,15 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_gerenciarCliente"
             android:text="Gerencie suas informações"
-            android:layout_width="307dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="30dp"
             android:layout_marginTop="12dp"
-            android:layout_marginEnd="30dp"
             android:background="@drawable/backgroud_buttom"
             android:drawableLeft="@drawable/ic_info"
-            android:drawablePadding="-10dp"
+            android:drawablePadding="8dp"
             android:gravity="center"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textStyle="bold" />
