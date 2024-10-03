@@ -128,21 +128,44 @@ class RelatorioDasOrdens : AppCompatActivity() {
         pdfCount++  // Incrementa o contador
         val pdfDocument = PdfDocument()
         val paint = Paint()
+        paint.color = android.graphics.Color.BLACK  // Define a cor do texto como preto
+        paint.textSize = 12f  // Define o tamanho do texto
+
+        // Define a cor e o estilo para as bordas
+        val borderPaint = Paint()
+        borderPaint.color = android.graphics.Color.BLACK
+        borderPaint.style = Paint.Style.STROKE
+        borderPaint.strokeWidth = 2f  // Espessura da borda
+
+        val cornerRadius = 15f  // Raio dos cantos arredondados
+
         val pageInfo = PdfDocument.PageInfo.Builder(595, 842, 1).create()
         val page = pdfDocument.startPage(pageInfo)
         val canvas: Canvas = page.canvas
 
         var yPosition = 40f
 
+        // Define o layout com bordas arredondadas para cada serviço
         for (servico in servicoList) {
-            canvas.drawText("Cliente: ${servico.Cliente ?: "Não informado"}", 20f, yPosition, paint)
-            canvas.drawText("Descrição: ${servico.descricao ?: "Não informado"}", 20f, yPosition + 20, paint)
-            canvas.drawText("Valor: ${servico.valor ?: "Não informado"}", 20f, yPosition + 40, paint)
-            canvas.drawText("Status: ${servico.status ?: "Não informado"}", 20f, yPosition + 60, paint)
-            canvas.drawText("Porte do Sistema: ${servico.porteSistema ?: "Não informado"}", 20f, yPosition + 80, paint)
-            canvas.drawText("ID: ${servico.id ?: "Não informado"}", 20f, yPosition + 100, paint)
+            // Define as dimensões da caixa com cantos arredondados
+            val left = 20f
+            val top = yPosition
+            val right = 575f
+            val bottom = yPosition + 140f
 
-            yPosition += 140
+            // Desenha a caixa com bordas arredondadas
+            val rectF = android.graphics.RectF(left, top, right, bottom)
+            canvas.drawRoundRect(rectF, cornerRadius, cornerRadius, borderPaint)  // Borda arredondada da caixa
+
+            // Desenha o texto dentro da caixa
+            canvas.drawText("Cliente: ${servico.Cliente ?: "Não informado"}", left + 10f, yPosition + 20f, paint)
+            canvas.drawText("Descrição: ${servico.descricao ?: "Não informado"}", left + 10f, yPosition + 40f, paint)
+            canvas.drawText("Valor R$: ${servico.valor ?: "Não informado"}", left + 10f, yPosition + 60f, paint)
+            canvas.drawText("Porte do sistema: ${servico.porteSistema ?: "Não informado"}", left + 10f, yPosition + 80f, paint)
+            canvas.drawText("Status: ${servico.status ?: "Não informado"}", left + 10f, yPosition + 100f, paint)
+            canvas.drawText("ID: ${servico.id ?: "Não informado"}", left + 10f, yPosition + 120f, paint)
+
+            yPosition += 160f  // Incrementa a posição vertical para a próxima caixa
         }
 
         pdfDocument.finishPage(page)
@@ -160,8 +183,6 @@ class RelatorioDasOrdens : AppCompatActivity() {
             pdfDocument.close()
         }
     }
-
-
 
     private fun mensagem(msg: String, titulo: String) {
         val builder = AlertDialog.Builder(this)
