@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.core.widget.NestedScrollView xmlns:tools="http://schemas.android.com/tools"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:fillViewport="true"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-
-
+    android:fillViewport="true">
 
     <LinearLayout
         android:id="@+id/main"
@@ -27,15 +25,13 @@
             android:textStyle="bold"
             android:layout_gravity="center"
             android:layout_marginTop="150dp"
-            android:layout_marginBottom="50dp"
-            />
+            android:layout_marginBottom="50dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center"
-            >
+            android:gravity="center">
 
             <RatingBar
                 android:id="@+id/ratingbar"
@@ -51,8 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
-            android:layout_marginStart="20dp"
-            />
+            android:layout_marginStart="20dp" />
 
         <TextView
             android:id="@+id/editdescricao"
@@ -61,27 +56,37 @@
             android:hint="Descrição da ordem"
             android:textColor="@color/white"
             android:textSize="20dp"
-            android:layout_marginStart="20dp"
-            />
+            android:layout_marginStart="20dp" />
 
-        <EditText
-            android:id="@+id/editComentario"
+        <!-- EditText para comentários com rolagem e múltiplas linhas -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/botao"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:lines="2"
             android:layout_marginEnd="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:hint="Digite aqui o seu comentario..."
-            android:textColorHint="@color/black"
-            android:padding="10dp"
+            android:hint="Digite aqui o seu comentário"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/black">
 
-            android:textColor="@color/black"
-            />
+            <!-- EditText para comentários -->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editComentario"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@null"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:maxLines="6"
+                android:scrollbars="vertical"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:overScrollMode="always"
+                android:scrollHorizontally="false"
+                android:focusableInTouchMode="true" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnAvaliacao"
@@ -95,8 +100,7 @@
             android:textStyle="bold"
             android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            />
+            android:layout_marginEnd="20dp" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
