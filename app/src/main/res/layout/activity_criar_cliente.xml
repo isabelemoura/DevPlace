@@ -110,6 +110,7 @@
                 app:hintTextColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTelefone"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="Telefone"

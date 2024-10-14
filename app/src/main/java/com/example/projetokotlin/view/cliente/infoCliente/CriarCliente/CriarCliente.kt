@@ -38,15 +38,11 @@ class CriarCliente : AppCompatActivity() {
             insets
         }
 
-
-
-
         binding.btnSalvar.setOnClickListener{
             try {
                 val email = binding.editEmail.text.toString()
                 if(email != null){
-                    db.collection("Cliente").document(id)
-                        .update(
+                    db.collection("Cliente").document(id).update(
                             mapOf(
                                 "Nome" to binding.editNome.text.toString(),
                                 "Telefone" to binding.editTelefone.text.toString(),
