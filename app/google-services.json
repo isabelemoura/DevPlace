@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "678623705842",
-    "project_id": "devplaceapp092024",
-    "storage_bucket": "devplaceapp092024.appspot.com"
+    "project_number": "38077366457",
+    "project_id": "devplacemobilenov",
+    "storage_bucket": "devplacemobilenov.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:678623705842:android:12f082c1e3335e8faeae6b",
+        "mobilesdk_app_id": "1:38077366457:android:85db84a7f420b0d1779b68",
         "android_client_info": {
           "package_name": "com.example.projetokotlin"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCx6l0sSFH7-1O4LBYSVYHLhmqvcEoVxh8"
+          "current_key": "AIzaSyDNTYeFe6KdPS2Et8qCzC9CvMd4lgjskm8"
         }
       ],
       "services": {
